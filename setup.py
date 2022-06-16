@@ -3,6 +3,7 @@ from setuptools import setup, find_packages
 base_dependencies = [
     "typer==0.4.1",
     "structlog==21.5.0",
+    "uvicorn==0.17.6",
 ]
 
 dev_dependencies = [
