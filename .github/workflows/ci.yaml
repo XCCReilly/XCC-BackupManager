@@ -30,10 +30,5 @@ jobs:
         gcloud auth configure-docker europe-west1-docker.pkg.dev --quiet
 
     - name: Push Docker Image to Artifact Registry
-      env:
-        GIT_TAG: v0.1.0
-      run: |-
-        docker tag $IMAGE_NAME:latest europe-west1-docker.pkg.dev/$PROJECT_ID/images/$IMAGE_NAME:latest
-        docker tag $IMAGE_NAME:latest europe-west1-docker.pkg.dev/$PROJECT_ID/images/$IMAGE_NAME:$GIT_TAG
-        docker push europe-west1-docker.pkg.dev/$PROJECT_ID/images/$IMAGE_NAME:latest
+      run: |
         docker push europe-west1-docker.pkg.dev/$PROJECT_ID/images/$IMAGE_NAME:$GIT_TAG
