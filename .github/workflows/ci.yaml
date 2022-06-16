@@ -39,7 +39,7 @@ jobs:
       PROJECT_ID: bootcamp-backup-cormac
     steps:
     - uses: actions/checkout@v2
-      uses: 'google-github-actions/auth@v0'
+    - uses: 'google-github-actions/auth@v0'
       with:
        credentials_json: ${{ secrets.SERVICE_ACCOUNT_KEY }}
     - name: Configure Docker Client
@@ -63,7 +63,7 @@ jobs:
       with:
        credentials_json: ${{ secrets.SERVICE_ACCOUNT_KEY }}
     - name: 'deploys to cloud run'
-      uses: 'google-github-actions/deploy-cloudrun@v0'
+    - uses: 'google-github-actions/deploy-cloudrun@v0'
       with:
         service: 'backup-manager'
         image: europe-west1-docker.pkg.dev/$ {{PROJECT_ID }}/images/$ {{ IMAGE_NAME }}:latest
