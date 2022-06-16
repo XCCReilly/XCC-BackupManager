@@ -62,9 +62,9 @@ jobs:
       uses: 'google-github-actions/auth@v0'
       with:
        credentials_json: ${{ secrets.SERVICE_ACCOUNT_KEY }}
-    - name: 'deploys to cloud run'
+    - name: 'Deploy to cloud run'
       uses: 'google-github-actions/deploy-cloudrun@v0'
       with:
-        service: 'backup-manager'
-        image: europe-west1-docker.pkg.dev/$ {{PROJECT_ID }}/images/$ {{ IMAGE_NAME }}:latest
-        project_id: ${{ env.PROJECT_ID }}
+        service: 'xcc_backupmanager'
+        image: europe-west1-docker.pkg.dev/bootcamp-backup-cormac/images/xcc_backupmanager:latest
+        project_id: 'bootcamp-backup-cormac'
