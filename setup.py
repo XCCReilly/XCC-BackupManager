@@ -4,6 +4,7 @@ base_dependencies = [
     "typer==0.4.1",
     "structlog==21.5.0",
     "uvicorn==0.17.6",
+    "fastapi==0.78.0",
 ]
 
 dev_dependencies = [
