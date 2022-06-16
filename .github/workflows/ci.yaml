@@ -50,5 +50,5 @@ jobs:
 
     - name: test
       run: |
-        docker pull europe-west1-docker.pkg.dev/$PROJECT_ID/images/$IMAGE_NAME:latest"
-        docker build -f Dockerfile.test --build-arg BASE_IMAGE=europe-west1-docker.pkg.dev/$PROJECT_ID/images/$IMAGE_NAME:latest" .
+        docker pull europe-west1-docker.pkg.dev/$PROJECT_ID/images/$IMAGE_NAME:latest
+        docker build -f Dockerfile.test --build-arg BASE_IMAGE=europe-west1-docker.pkg.dev/$PROJECT_ID/images/$IMAGE_NAME:latest .
