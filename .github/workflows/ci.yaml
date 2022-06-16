@@ -66,5 +66,5 @@ jobs:
       uses: 'google-github-actions/deploy-cloudrun@v0'
       with:
         service: 'backup-manager'
-        image: europe-west1-docker.pkg.dev/${{ env.PROJECT_ID }}/images/${{ env.PROJECT_ID }}:latest
+        image: europe-west1-docker.pkg.dev/${{ env.PROJECT_ID }}/images/${{ env.IMAGE_NAME }}:latest
         project_id: '${{ env.PROJECT_ID }}'
