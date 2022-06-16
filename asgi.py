@@ -15,6 +15,3 @@ structlog.configure(
     logger_factory=structlog.PrintLoggerFactory(),
     cache_logger_on_first_use=False
 )
-
-
-from backupmanager.app import app
