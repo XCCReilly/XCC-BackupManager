@@ -17,4 +17,4 @@ RUN pip install -e ".[all]"
 
 USER appuser
 
-CMD ["/bin/bash", "-c", "uvicorn asgi:app --reload --host 0.0.0.0 --port $PORT"]
+CMD ["uvicorn", "uvicorn asgi:app --reload --host 0.0.0.0 --port $PORT"]
