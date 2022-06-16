@@ -10,4 +10,3 @@ app = FastAPI()
 def create_backup(project: str, zone: str):
     bm = BackupManager(GCPBackend(project=project, zone=zone))
     bm.make_backups()
-    
