@@ -9,13 +9,13 @@ jobs:
     name: Build and Push to GCP
     runs-on: ubuntu-latest
     env:
-      IMAGE_NAME: cr_test_img
+      IMAGE_NAME: xcc_backupmanager
       PROJECT_ID: titanium-vision-353414
     steps:
     - name: Checkout
       uses: actions/checkout@v2
 
-    - uses: google-github-actions/setup-gcloud@master
+    - uses: uses: google-github-actions/setup-gcloud@v0
       with:
         service_account_key: ${{ secrets.SERVICE_ACCOUNT_KEY }}
         project_id: ${{ env.PROJECT_ID }}
