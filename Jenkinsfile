@@ -1,5 +1,4 @@
 pipeline {
-<<<<<<< HEAD
     agent { docker { image 'python:3.8' } }
 
     environment {
@@ -35,14 +34,6 @@ pipeline {
                 }
             }
         }
-=======
-  agent any
-  stages {
-    stage('Hello') {
-      steps {
-        echo 'Hello World'
-      }
->>>>>>> ea64d2d97daffd0bcc0ec095acc60e697fefa8c9
     }
 
   }
